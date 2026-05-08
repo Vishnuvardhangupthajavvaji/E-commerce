@@ -11,4 +11,9 @@ urlpatterns = [
     path('users/', include('users.urls')),
     path('products/', include('products.urls')),
     path('cart/', include('cart.urls')),
+    path('comments/', include('comments.urls')),
+    path('wishlist/', include('wishlist.urls')),
+
+    # Admin routes
+    path("orders/", include("orders.urls")),
 ]

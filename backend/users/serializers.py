@@ -44,3 +44,12 @@ class ChangePasswordSerializer(serializers.Serializer):
             raise serializers.ValidationError({"old_password":"Incorrect password"})
 
         return data
+
+
+
+class AdminUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'email', 'first_name', 'last_name', "phone", 
+                  'is_staff', 'is_active', 'date_joined', 'date_joined']
+        read_only_fields = fields 
